@@ -1,0 +1,23 @@
+#include <stdio.h>
+void int_to_bin(int num) {
+  char str[9] = {0};
+  int i;
+  for (i=7; i>=0; i--) {
+    str[i] = (num&1)?'1':'0';
+    printf("%c == \n",str[i]);
+    num >>= 1;
+    printf("%d--\n",num);
+   }
+  printf("%s\n", str);
+  int N = atoi(str);
+  printf("N is %08d",N);
+}
+
+int main()
+{
+    printf("Hello World \n");
+    int n =7;
+    int_to_bin(n);
+
+    return 0;
+}
